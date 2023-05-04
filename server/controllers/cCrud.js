@@ -9,10 +9,10 @@ import { createError } from "../error.js";
 // req: representa lo que estamos objetiendo del usuario.
 // res: lo que estamos enviandole al usuario
 // next: indica que debe ejecutar el siguiente middleware espicificado en el index
-export const test = (req, res) => {
-    res.json("Its successfull");
-    console.log("test is working");
-};
+// export const test = (req, res) => {
+//     res.json("Its successfull");
+//     console.log("test is working");
+// };
 
 
 // CREATE A USER

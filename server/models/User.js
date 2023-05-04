@@ -11,7 +11,7 @@ const UserSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
-    celular: {
+    number: {
         type: Number,
         required: true,
         unique: true,

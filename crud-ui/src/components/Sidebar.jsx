@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import '../css/ComponentsCss/Sidebar.css'
+import Styles from '../css/componentsCss/Sidebar.module.css'
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../images/circle-logo-turbine-png.png'
@@ -10,36 +10,36 @@ function Sidebar() {
     const handleClick = () => setSidebar(!sidebar)
 
     return (
-        <div className='Container'>
+        <div className={Styles.Container}>
 
-            <ul className='Mobile-Sidebar' style={{ display: !sidebar ? 'none' : 'flex' }}>
+            <ul className={Styles.MobileSidebar} style={{ display: !sidebar ? 'none' : 'flex' }}>
                 <li>
-                    <Link to="Create">
+                    <Link to="Create" onClick={() => setSidebar(false)} >
                         <div>prueba</div>
                     </Link>
                 </li>
                 <li>
-                    <Link to="Edit">
+                    <Link to="Edit" onClick={() => setSidebar(false)} >
                         <div>hola</div>
                     </Link>
                 </li>
             </ul>
 
+
+            {/* Hamburguer */}
+            <div onClick={handleClick} className={Styles.MenuIcon}>
+                {!sidebar ? <FaBars /> : <FaTimes />}
+            </div>
+
             <figure>
                 <img
-                    className='Logo'
+                    className={Styles.Logo}
                     src={logo}
                 />
             </figure>
 
 
-            {/* Hamburguer */}
-            <div onClick={handleClick} className='MenuIcon'>
-                {!sidebar ? <FaBars /> : <FaTimes />}
-            </div>
-
-
-            <ul className='Breakpoint-Sidebar'>
+            <ul className={Styles.BreakpointSidebar}>
                 <li>
                     <Link to="Create">
                         <div>prueba</div>

@@ -1,4 +1,4 @@
-import './css/App.css';
+import Styles from './css/App.module.css';
 import Dashboard from './pages/Dashboard.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import Create from './pages/Create.jsx'
@@ -11,7 +11,7 @@ import {
 
 function App() {
     return (
-        <div className="App">
+        <div className={Styles.App}>
             <BrowserRouter>
                 <Sidebar />
                 <Routes>

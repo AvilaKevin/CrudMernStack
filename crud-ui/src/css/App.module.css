@@ -1,7 +1,10 @@
 .App {
-    display: block;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     min-height: 100vh;
+    background-color: #f4f4f7;
+    padding: 0px 12px;
 }
 
 @media (min-width: 767px) {

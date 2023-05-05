@@ -1,0 +1,13 @@
+.App {
+    display: block;
+    height: 100%;
+    min-height: 100vh;
+}
+
+@media (min-width: 767px) {
+
+    .App {
+        display: flex;
+    }
+
+}

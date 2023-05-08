@@ -1,6 +1,43 @@
 .Container {
-    background-color: aquamarine;
-    color: blue;
+    display: flex;
     height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1 {
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.SearchContainer {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+    padding: 0px 8px;
+}
+
+.Search {
+    display: flex;
+    width: 95%;
+    border: solid 1px #e5e5e5;
+    border-radius: 4px;
+    padding: 6px;
+    justify-content: space-between;
+}
+
+.Input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.UsersTable {
     width: 100%;
 }

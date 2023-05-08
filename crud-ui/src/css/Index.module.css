@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    font-family: 'Signika', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
     height: 100%;

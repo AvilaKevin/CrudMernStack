@@ -1,0 +1,34 @@
+.Container {
+    width: 100%;
+    background-color: white;
+    padding: 6px 16px;
+    border-radius: 8px;
+}
+
+.headUserContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.h1 {
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.h2 {
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.Icons {
+    display: flex;
+    font-size: 20px;
+    width: 14%;
+    justify-content: space-between;
+}
+
+.fields {
+    margin-bottom: 10px;
+}

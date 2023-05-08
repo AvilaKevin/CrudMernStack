@@ -28,11 +28,12 @@ function Sidebar() {
 
             {/* Hamburguer */}
             <div onClick={handleClick} className={Styles.MenuIcon}>
-                {!sidebar ? <FaBars /> : <FaTimes />}
+                {!sidebar ? <FaBars className={Styles.prueba} /> : <FaTimes />}
             </div>
 
             <figure>
                 <img
+                    alt='Company Logo'
                     className={Styles.Logo}
                     src={logo}
                 />

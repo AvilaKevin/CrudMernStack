@@ -8,20 +8,18 @@ function Dashboard() {
 
         <div className={Styles.Container}>
 
-            <div>
-                <h1>Dashboard</h1>
-            </div>
+            <h1 className={Styles.h1}>Customers</h1>
 
             <div className={Styles.SearchContainer}>
-                <div>
-                    <input />
+                <div className={Styles.Search}>
+                    <input className={Styles.Input} placeholder="Search..." />
                     <RiSearchLine />
                 </div>
             </div>
-
-            <div className={Styles.UsersTable}>
-                <User />
-            </div>
+            <User />
+            {/* <div className={Styles.UsersTable}>
+                
+            </div> */}
 
         </div>
 

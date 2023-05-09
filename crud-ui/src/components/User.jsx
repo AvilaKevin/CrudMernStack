@@ -2,11 +2,11 @@ import React from 'react';
 import { FiEdit, FiTrash } from 'react-icons/fi';
 import Styles from '../css/componentsCss/User.module.css';
 
-function User() {
+function User({ customer }) {
     return (
         <div className={Styles.Container}>
             <div className={Styles.headUserContainer}>
-                <h1 className={Styles.h1}>Christian Espinoza</h1>
+                <h1 className={Styles.h1}>{customer.name}</h1>
                 <div className={Styles.Icons} >
                     <FiEdit />
                     <FiTrash />
@@ -16,12 +16,12 @@ function User() {
             <div>
                 <div className={Styles.fields}>
                     <h2 className={Styles.h2}>Email</h2>
-                    <p className={Styles.p}>kevin@sadfa.com</p>
+                    <p className={Styles.p}>{customer.email}</p>
                 </div>
 
                 <div className={Styles.fields}>
                     <h2 className={Styles.h2}>Phone Number</h2>
-                    <p className={Styles.p}>123123123</p>
+                    <p className={Styles.p}>{customer.number}</p>
                 </div>
             </div>
 

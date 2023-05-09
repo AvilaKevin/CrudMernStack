@@ -25,7 +25,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: pink;
+    background-color: #f4f4f7;
+    z-index: 9;
 }
 
 li {

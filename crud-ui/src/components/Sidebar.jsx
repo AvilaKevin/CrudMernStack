@@ -12,15 +12,16 @@ function Sidebar() {
     return (
         <div className={Styles.Container}>
 
+            {/* Mobile menu */}
             <ul className={Styles.MobileSidebar} style={{ display: !sidebar ? 'none' : 'flex' }}>
-                <li>
-                    <Link to="Create" onClick={() => setSidebar(false)} >
-                        <div>prueba</div>
+                <li className={Styles.li}>
+                    <Link to="/" onClick={() => setSidebar(false)} className={Styles.Link}>
+                        Customers
                     </Link>
                 </li>
-                <li>
-                    <Link to="Edit" onClick={() => setSidebar(false)} >
-                        <div>hola</div>
+                <li className={Styles.li}>
+                    <Link to="Create" onClick={() => setSidebar(false)} className={Styles.Link} >
+                        Create
                     </Link>
                 </li>
             </ul>
@@ -40,15 +41,16 @@ function Sidebar() {
             </figure>
 
 
+            {/* Desktop menu */}
             <ul className={Styles.BreakpointSidebar}>
-                <li>
-                    <Link to="Create">
-                        <div>prueba</div>
+                <li className={Styles.li}>
+                    <Link to="/" className={Styles.Link} >
+                        Customers
                     </Link>
                 </li>
-                <li>
-                    <Link to="Edit">
-                        <div>hola</div>
+                <li className={Styles.li}>
+                    <Link to="Create" className={Styles.Link} >
+                        Create
                     </Link>
                 </li>
             </ul>

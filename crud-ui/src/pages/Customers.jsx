@@ -1,5 +1,5 @@
 import React from 'react'
-import Styles from '../css/pagesCss/Dasboard.module.css'
+import Styles from '../css/pagesCss/Customers.module.css'
 import { RiSearchLine } from 'react-icons/ri'
 import User from '../components/User'
 

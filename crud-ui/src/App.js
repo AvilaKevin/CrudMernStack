@@ -1,5 +1,5 @@
 import Styles from './css/App.module.css';
-import Dashboard from './pages/Dashboard.jsx';
+import Customers from './pages/Customers.jsx';
 import Sidebar from './components/Sidebar.jsx';
 import Create from './pages/Create.jsx'
 import Edit from './pages/Edit.jsx'
@@ -16,7 +16,7 @@ function App() {
                 <Sidebar />
                 <Routes>
                     <Route path='/'>
-                        <Route index element={<Dashboard />} />
+                        <Route index element={<Customers />} />
                         <Route path='Create' element={<Create />} />
                         <Route path='Edit' element={<Edit />} />
                     </Route>

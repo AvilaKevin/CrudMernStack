@@ -14,10 +14,10 @@ function Create() {
 
                 <form className={Styles.Form}>
 
-                    <label for="name" className={Styles.Label}>Name</label>
+                    <label htmlFor="name" className={Styles.Label}>Name</label>
                     <input type="text" id="name" name="name" placeholder='Kevin' className={Styles.InputWhitoutIcon} />
 
-                    <label for="email" className={Styles.Label}>E-mail</label>
+                    <label htmlFor="email" className={Styles.Label}>E-mail</label>
                     <div>
                         <i className={Styles.icon}>
                             <HiOutlineMail />
@@ -25,12 +25,12 @@ function Create() {
                         <input type="email" id="email" name="email" placeholder='example@gmail.com' className={Styles.Input} />
                     </div>
 
-                    <label for="phone" className={Styles.Label}>Phone Number</label>
+                    <label htmlFor="phone" className={Styles.Label}>Phone Number</label>
                     <div>
                         <i className={Styles.icon}>
                             <BsPhone />
                         </i>
-                        <input type="tel" id="phone" name="phone" placeholder='3632941994' class={Styles.Input} />
+                        <input type="tel" id="phone" name="phone" placeholder='3632941994' className={Styles.Input} />
                     </div>
 
                     <button className={Styles.CreateButton}>

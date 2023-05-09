@@ -29,8 +29,14 @@
     z-index: 9;
 }
 
-li {
-    padding: 6px 4px;
+.li {
+    padding: 24px 16px;
+    font-size: 2.25rem;
+}
+
+.Link {
+    color: inherit;
+    text-decoration: inherit;
 }
 
 .Logo {

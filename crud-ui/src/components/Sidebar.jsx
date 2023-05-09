@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import Styles from '../css/componentsCss/Sidebar.module.css'
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import logo from '../images/circle-logo-turbine-png.png'
+import { HiOutlineUsers } from 'react-icons/hi';
+import { MdOutlineCreateNewFolder } from 'react-icons/md';
+import logo from '../images/circle-logo-turbine-png.png';
 
 function Sidebar() {
     const [sidebar, setSidebar] = useState(false);
@@ -32,28 +34,51 @@ function Sidebar() {
                 {!sidebar ? <FaBars className={Styles.prueba} /> : <FaTimes />}
             </div>
 
-            <figure>
-                <img
-                    alt='Company Logo'
-                    className={Styles.Logo}
-                    src={logo}
-                />
-            </figure>
+            <div className={Styles.ContainerLogoMobile}>
+                <figure>
+                    <img
+                        alt='Company Logo'
+                        className={Styles.Logo}
+                        src={logo}
+                    />
+                </figure>
+            </div>
+
+
 
 
             {/* Desktop menu */}
-            <ul className={Styles.BreakpointSidebar}>
-                <li className={Styles.li}>
-                    <Link to="/" className={Styles.Link} >
-                        Customers
-                    </Link>
-                </li>
-                <li className={Styles.li}>
-                    <Link to="Create" className={Styles.Link} >
-                        Create
-                    </Link>
-                </li>
-            </ul>
+            <div className={Styles.BreakpointSidebar}>
+
+                <div className={Styles.ContainerLogoDesktop}>
+                    <figure>
+                        <img
+                            alt='Company Logo'
+                            className={Styles.Logo}
+                            src={logo}
+                        />
+                    </figure>
+                    <div>
+                        <h1 className={Styles.h1}>COMPANY</h1>
+                        <h2 className={Styles.h2}>SLOGAN</h2>
+                    </div>
+                </div>
+                <h1 className={Styles.H1Menu}>Main Menu</h1>
+                <ul >
+                    <li className={Styles.li}>
+                        <Link to="/" className={Styles.Link} >
+                            <i className={Styles.i}><HiOutlineUsers /></i> Customers
+                        </Link>
+                    </li>
+                    <li className={Styles.li}>
+                        <Link to="Create" className={Styles.Link} >
+                            <i className={Styles.i}><MdOutlineCreateNewFolder /></i> Create
+                        </Link>
+                    </li>
+                </ul>
+
+            </div>
+
 
         </div>
     )

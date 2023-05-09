@@ -46,17 +46,80 @@
 @media (min-width: 767px) {
 
     .Container {
-        width: 40%;
+        display: flex;
+        width: 30%;
         height: 100%;
-        background-color: red;
+        background-color: white;
+        flex-direction: column;
+        padding: 30px;
+        /* box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2); */
     }
 
     .BreakpointSidebar {
-        background-color: aqua;
+        width: 100%;
         display: inline-block;
     }
 
     .MenuIcon {
         display: none;
     }
+
+    .ContainerLogoMobile {
+        display: none;
+    }
+
+    .ContainerLogoDesktop {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .Logo {
+        width: 50px;
+    }
+
+    .h1 {
+        font-size: 2.5rem;
+        color: #77b990;
+        font-weight: 700;
+    }
+
+    .h2 {
+        font-size: 1.50rem;
+        color: #b5dec1;
+        font-weight: 400;
+    }
+
+    .H1Menu {
+        font-size: 2rem;
+        color: #a1a1a1;
+        font-weight: 200;
+        margin-top: 50px;
+    }
+
+    .li {
+        padding: 16px 14px;
+    }
+
+    .Link {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        color: #77b990;
+        font-weight: 600;
+    }
+
+    .i {
+        margin-right: 10px;
+        display: flex;
+    }
 }
+
+
+/* @media screen and (min-width: 950px) {
+    .h1 {
+        font-size: 2.5rem;
+        color: #77b990;
+        font-weight: 700;
+    }
+} */

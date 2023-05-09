@@ -13,22 +13,37 @@
 }
 
 .h1 {
-    font-size: 24px;
-    font-weight: bolder;
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .h2 {
-    font-weight: bolder;
-    font-size: 15px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.p {
+    font-size: 1.8rem;
+    font-weight: 300;
 }
 
 .Icons {
     display: flex;
-    font-size: 20px;
+    font-size: 2rem;
     width: 14%;
     justify-content: space-between;
 }
 
 .fields {
     margin-bottom: 10px;
+}
+
+
+
+/* PC AND TABLE STYLES */
+@media (min-width: 767px) {
+    .Icons {
+        width: 8%;
+    }
 }

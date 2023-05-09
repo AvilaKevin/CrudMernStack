@@ -16,12 +16,12 @@ function User() {
             <div>
                 <div className={Styles.fields}>
                     <h2 className={Styles.h2}>Email</h2>
-                    <p>kevin@sadfa.com</p>
+                    <p className={Styles.p}>kevin@sadfa.com</p>
                 </div>
 
                 <div className={Styles.fields}>
                     <h2 className={Styles.h2}>Phone Number</h2>
-                    <p>123123123</p>
+                    <p className={Styles.p}>123123123</p>
                 </div>
             </div>
 

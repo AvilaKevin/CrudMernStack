@@ -11,15 +11,12 @@ function Dashboard() {
             <h1 className={Styles.h1}>Customers</h1>
 
             <div className={Styles.SearchContainer}>
-                <div className={Styles.Search}>
-                    <input className={Styles.Input} placeholder="Search..." />
-                    <RiSearchLine />
-                </div>
+
+                <input className={Styles.Input} placeholder="Search..." />
+                <i><RiSearchLine /></i>
+
             </div>
             <User />
-            {/* <div className={Styles.UsersTable}>
-                
-            </div> */}
 
         </div>
 

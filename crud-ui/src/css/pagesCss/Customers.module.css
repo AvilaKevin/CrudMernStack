@@ -7,8 +7,8 @@
 }
 
 .h1 {
-    font-size: 24px;
-    font-weight: bolder;
+    font-size: 2.4rem;
+    font-weight: 500;
 }
 
 .SearchContainer {
@@ -23,21 +23,48 @@
     padding: 0px 8px;
 }
 
-.Search {
-    display: flex;
-    width: 95%;
-    border: solid 1px #e5e5e5;
-    border-radius: 4px;
-    padding: 6px;
-    justify-content: space-between;
+.SearchContainer i {
+    position: absolute;
+    z-index: 2;
+    font-size: 2.2rem;
+    color: #7a7a7a;
+    right: 10%;
 }
 
 .Input {
-    border: none;
-    background-color: transparent;
-    outline: none;
+    display: flex;
+    width: 95%;
+    height: 10%;
+    background-color: white;
+    border: solid 1px #e5e5e5;
+    border-radius: 6px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 18px 11% 18px 8px;
+}
+
+.Input:focus {
+    outline: 2px solid #b5dec1;
+}
+
+.Input::placeholder {
+    color: #cdcdcd;
 }
 
 .UsersTable {
     width: 100%;
+}
+
+
+/* PC AND TABLE STYLES */
+@media (min-width: 767px) {
+    .Container {
+        padding: 35px 6%;
+        align-items: flex-start;
+    }
+
+    .h1 {
+        font-size: 3.5rem;
+        font-weight: 500;
+    }
 }

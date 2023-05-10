@@ -33,6 +33,11 @@
     font-size: 2rem;
     width: 14%;
     justify-content: space-between;
+
+}
+
+.Icons i {
+    cursor: pointer;
 }
 
 .fields {

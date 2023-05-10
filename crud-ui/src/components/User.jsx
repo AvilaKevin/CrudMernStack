@@ -1,15 +1,22 @@
 import React from 'react';
 import { FiEdit, FiTrash } from 'react-icons/fi';
 import Styles from '../css/componentsCss/User.module.css';
+import axios from 'axios';
 
-function User({ customer }) {
+function User({ customer, fetchCustomers }) {
+
+    const handleDelete = async () => {
+        await axios.delete(`deleteUser/${customer._id}`)
+        fetchCustomers()
+    }
+
     return (
         <div className={Styles.Container}>
             <div className={Styles.headUserContainer}>
                 <h1 className={Styles.h1}>{customer.name}</h1>
                 <div className={Styles.Icons} >
-                    <FiEdit />
-                    <FiTrash />
+                    <i><FiEdit /></i>
+                    <i><FiTrash onClick={handleDelete} /></i>
                 </div>
             </div>
 

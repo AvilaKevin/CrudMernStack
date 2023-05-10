@@ -13,19 +13,19 @@ function Dashboard() {
 
     const [input, setInput] = useState("");
 
+
+    // Se crea una funcion encargada de capturar los customers de nuestra api
+    // Debe ser asyn ya que se esta puede tardar un tiempo
+    const fetchCustomers = async () => {
+        // se crea variable que almacena la res, se indica q lo siguiente puede tardar con await, se procede a hacer uso de axios y del metodo get para dirigirse al endpoint y capturar la informacion de la api
+        const res = await axios.get("/getUsers");
+
+        // se almacena la res en nuestro estado
+        setCustomers(res.data);
+    };
+
     // Se hace uso de useEffect para captuarar la informacion de la api antes de que se renderice el componente
     useEffect(() => {
-
-        // Se crea una funcion encargada de capturar los customers de nuestra api
-        // Debe ser asyn ya que se esta puede tardar un tiempo
-        const fetchCustomers = async () => {
-            // se crea variable que almacena la res, se indica q lo siguiente puede tardar con await, se procede a hacer uso de axios y del metodo get para dirigirse al endpoint y capturar la informacion de la api
-            const res = await axios.get("/getUsers");
-
-            // se almacena la res en nuestro estado
-            setCustomers(res.data);
-        };
-
         fetchCustomers();
     }, []);
 
@@ -54,7 +54,7 @@ function Dashboard() {
                 <i className={Styles.ErrIcon}><AiOutlineFileExcel /></i>
             </div> :
                 customers.map((customer) => (
-                    <User key={customer._id} customer={customer} />
+                    <User key={customer._id} customer={customer} fetchCustomers={fetchCustomers} />
                 ))}
 
         </div>

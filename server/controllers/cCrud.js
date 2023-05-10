@@ -81,3 +81,23 @@ export const updateUser = async (req, res, next) => {
     }
 };
 
+
+// FIND IN DB
+export const search = async (req, res, next) => {
+    const query = req.query.q;
+    try {
+        const Customers = await User.find({
+            // or nos sirve para ejecutar consultas sobre varios campos de nuestra base de datos
+            $or: [
+                // regex options: i nos permite pasar por alto las mayus y minusculas
+                { name: { $regex: query, $options: "i" } },
+                { email: { $regex: query, $options: "i" } },
+                { number: { $regex: query } },
+            ]
+        });
+
+        res.status(200).json(Customers)
+    } catch (err) {
+        next(err)
+    }
+}

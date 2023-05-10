@@ -1,5 +1,5 @@
 import express from "express";
-import { createUser, deleteUser, getUsers, updateUser } from "../controllers/cCrud.js";
+import { createUser, deleteUser, getUsers, search, updateUser } from "../controllers/cCrud.js";
 
 // Se crea el enrutador para este archivo
 const router = express.Router();
@@ -18,5 +18,8 @@ router.get("/getUsers", getUsers);
 
 // UPDATE A USER
 router.put("/updateUser/:id", updateUser)
+
+// SEARCH
+router.get("/search", search);
 
 export default router;

@@ -11,6 +11,8 @@ function User({ customer, fetchCustomers }) {
     const handleDelete = async () => {
         await axios.delete(`deleteUser/${customer._id}`)
         fetchCustomers()
+
+        alert("User deleted")
     }
 
     return (

@@ -82,7 +82,7 @@ function Edit() {
                     <button className={Styles.CreateButton} onClick={handleData}>
                         Save changes
                     </button>
-                    <button className={Styles.DiscardButton} >
+                    <button className={Styles.DiscardButton} onClick={() => navigate('/')} >
                         Discard
                     </button>
 

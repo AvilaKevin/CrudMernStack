@@ -5,7 +5,6 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
-
 function Create() {
 
     const [inputs, setInputs] = useState({});
@@ -31,6 +30,8 @@ function Create() {
 
         // nos envia la pesta;a que le indiquemos si la respuesta del server es 200
         res.status === 200 && navigate('/')
+
+        alert("Customer created")
     }
 
 
@@ -65,7 +66,8 @@ function Create() {
                     <button className={Styles.CreateButton} onClick={handleUpload}>
                         Create
                     </button>
-                    <button className={Styles.DiscardButton} >
+
+                    <button className={Styles.DiscardButton} onClick={() => navigate('/')}>
                         Discard
                     </button>
 

@@ -18,7 +18,9 @@ function App() {
                     <Route path='/'>
                         <Route index element={<Customers />} />
                         <Route path='Create' element={<Create />} />
-                        <Route path='Edit' element={<Edit />} />
+                        <Route path='Edit'>
+                            <Route path=':id' element={<Edit />} />
+                        </Route>
                     </Route>
                 </Routes>
             </BrowserRouter>

@@ -78,7 +78,7 @@ export const updateUser = async (req, res, next) => {
         res.status(200).json(updatedUser);
     } catch (err) {
         next(err);
-    }
+    };
 };
 
 
@@ -86,7 +86,7 @@ export const updateUser = async (req, res, next) => {
 export const search = async (req, res, next) => {
     const query = req.query.q;
     try {
-        const Customers = await User.find({
+        const customers = await User.find({
             // or nos sirve para ejecutar consultas sobre varios campos de nuestra base de datos
             $or: [
                 // regex options: i nos permite pasar por alto las mayus y minusculas
@@ -96,8 +96,21 @@ export const search = async (req, res, next) => {
             ]
         });
 
-        res.status(200).json(Customers)
+        res.status(200).json(customers);
     } catch (err) {
-        next(err)
-    }
-}
+        next(err);
+    };
+};
+
+// GET A USER
+export const getUser = async (req, res, next) => {
+    const id = req.params.id;
+
+    try {
+        const customer = await User.findById(id);
+
+        res.status(200).json(customer);
+    } catch (err) {
+        next(err);
+    };
+};

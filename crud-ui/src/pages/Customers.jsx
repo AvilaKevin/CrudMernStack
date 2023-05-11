@@ -47,15 +47,19 @@ function Dashboard() {
 
             </div>
 
-            {/* se hace uso de map para renderizar cada uno de los elementos que se traen de la api, 
+            <div className={Styles.pruebas}>
+                {/* se hace uso de map para renderizar cada uno de los elementos que se traen de la api, 
             es necesario agregar un identificador osea key para que react no genere error, este puede ser el id, se envia la informacio capturada de la api a nuestro componente User para mostrar correctamente la informacion */}
-            {customers.length === 0 ? <div className={Styles.ErrContainer}>
-                <h1 className={Styles.h1}>Ups, no data</h1>
-                <i className={Styles.ErrIcon}><AiOutlineFileExcel /></i>
-            </div> :
-                customers.map((customer) => (
-                    <User key={customer._id} customer={customer} fetchCustomers={fetchCustomers} />
-                ))}
+                {customers.length === 0 ? <div className={Styles.ErrContainer}>
+                    <h1 className={Styles.h1}>Ups, no data</h1>
+                    <i className={Styles.ErrIcon}><AiOutlineFileExcel /></i>
+                </div> :
+                    customers.map((customer) => (
+                        <User key={customer._id} customer={customer} fetchCustomers={fetchCustomers} />
+                    ))}
+            </div>
+
+
 
         </div>
 

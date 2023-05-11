@@ -1,8 +1,6 @@
 .Container {
-    width: 100%;
-    background-color: white;
-    padding: 6px 16px;
-    border-radius: 8px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 30px;
 }
 
 .headUserContainer {

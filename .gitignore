@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 /server/.env
+/server/node_modules
+/crud-ui/node_modules

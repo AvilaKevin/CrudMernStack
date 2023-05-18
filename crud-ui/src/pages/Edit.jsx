@@ -10,7 +10,6 @@ function Edit() {
     const [customer, setCustomer] = useState({});
     const [inputs, setInputs] = useState({});
 
-    // Se usa split pa capturar solo el id
     const path = useLocation().pathname.split("/")[2];
 
     const navigate = useNavigate();
@@ -28,8 +27,6 @@ function Edit() {
     // SAVE THE VALUE INPUTS
     const handleInputs = (e) => {
         setInputs((prev) => {
-            // prev = a los inputs almacenados anteriormente
-            // crea un objeto con los inputs previos y crea otro con el campo name y value
             return { ...prev, [e.target.name]: e.target.value };
         });
     };

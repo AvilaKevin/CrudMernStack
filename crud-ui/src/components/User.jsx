@@ -8,6 +8,7 @@ function User({ customer, fetchCustomers }) {
 
     const navigate = useNavigate();
 
+    // DELETE A USER
     const handleDelete = async () => {
         await axios.delete(`deleteUser/${customer._id}`)
         fetchCustomers()

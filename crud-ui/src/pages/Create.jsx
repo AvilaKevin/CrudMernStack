@@ -8,27 +8,20 @@ import axios from 'axios';
 function Create() {
 
     const [inputs, setInputs] = useState({});
-
-    // Se incializa de este modo para evitar errores en react
     const navigate = useNavigate();
 
-    // Esta funcion captura el valor de todos los inputs y los almacena en el estado
+    // SAVE THE VALUE INPUTS
     const handleChange = (e) => {
         setInputs((prev) => {
-            // prev = a los inputs almacenados anteriormente
-            // // crea un objeto con los inputs previos y crea otro con el campo name y value
             return { ...prev, [e.target.name]: e.target.value };
         });
     };
 
+    // CREATE A USER
     const handleUpload = async (e) => {
-        // evita el refresco de nuestra pg
         e.preventDefault();
 
-        // Se envia una copia de nuestro objeto a la api
         const res = await axios.post("/userCreation", { ...inputs })
-
-        // nos envia la pesta;a que le indiquemos si la respuesta del server es 200
         res.status === 200 && navigate('/')
 
         alert("Customer created")

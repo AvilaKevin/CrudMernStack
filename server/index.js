@@ -1,7 +1,7 @@
-import express from "express";
-import mongoose from "mongoose";
-import crudRoutes from "./routes/rCrud.js";
-import dotenv from "dotenv";
+import express from 'express';
+import mongoose from 'mongoose';
+import crudRoutes from './routes/rCrud.js';
+import dotenv from 'dotenv';
 
 const app = express();
 
@@ -11,20 +11,19 @@ const connect = () => {
     mongoose
         .connect(process.env.MONGO)
         .then(() => {
-            console.log("Connected to DB");
+            console.log('Connected to DB');
         })
         .catch((err) => {
             throw err;
         });
 };
 
-
 // MIDDLEWARE SECTION:
 app.use(express.json());
-app.use("/api/crud", crudRoutes);
-app.use((err, req, res, next) => {
+app.use('/api/crud', crudRoutes);
+app.use((err, req, res) => {
     const status = err.status || 500;
-    const message = err.message || "Something went wrong!";
+    const message = err.message || 'Something went wrong!';
     return res.status(status).json({
         success: false,
         status,
@@ -32,8 +31,7 @@ app.use((err, req, res, next) => {
     });
 });
 
-
 app.listen(8800, () => {
     connect();
-    console.log("Connected to server!");
+    console.log('Connected to server!');
 });

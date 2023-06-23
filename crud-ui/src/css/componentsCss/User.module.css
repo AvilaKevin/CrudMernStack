@@ -31,7 +31,6 @@
     font-size: 2rem;
     width: 14%;
     justify-content: space-between;
-
 }
 
 .Icons i {
@@ -41,8 +40,6 @@
 .fields {
     margin-bottom: 10px;
 }
-
-
 
 /* PC AND TABLE STYLES */
 @media (min-width: 767px) {

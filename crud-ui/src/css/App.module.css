@@ -8,11 +8,9 @@
 }
 
 @media (min-width: 767px) {
-
     .App {
         display: flex;
         flex-direction: row;
         padding: 0px;
     }
-
 }

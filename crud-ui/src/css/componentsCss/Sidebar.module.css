@@ -46,11 +46,8 @@
     width: 46px;
 }
 
-
-
 /* PC AND TABLE STYLES */
 @media (min-width: 767px) {
-
     .Container {
         display: flex;
         width: 30%;
@@ -91,7 +88,7 @@
     }
 
     .h2 {
-        font-size: 1.50rem;
+        font-size: 1.5rem;
         color: #b5dec1;
         font-weight: 400;
     }

@@ -10,7 +10,7 @@ dotenv.config();
 
 const connect = () => {
     mongoose
-        .connect("mongodb+srv://kevin:kevin@crud.vk8fxst.mongodb.net/test?retryWrites=true&w=majority")
+        .connect(process.env.MONGO)
         .then(() => {
             console.log('Connected to DB');
         })

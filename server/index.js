@@ -31,7 +31,7 @@ app.use((err, req, res) => {
     });
 });
 
-app.listen("https://crud-mern-stack-api.vercel.app/", () => {
+app.listen("https://vercel.com/", () => {
     connect();
     console.log('Connected to server!');
 });

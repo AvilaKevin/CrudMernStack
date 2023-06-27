@@ -1,6 +1,9 @@
 import express from 'express';
-import { createUser, deleteUser, getUser, getUsers, search, updateUser } from '../controllers/cCrud.js';
+import { createUser, deleteUser, getUser, getUsers, search, test, updateUser } from '../controllers/cCrud.js';
 const router = express.Router();
+
+// CREATE USER
+router.get('/test', test);
 
 // CREATE USER
 router.post('/userCreation', createUser);

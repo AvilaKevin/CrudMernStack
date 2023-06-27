@@ -2,6 +2,16 @@ import mongoose from 'mongoose';
 import User from '../models/User.js';
 import { createError } from '../error.js';
 
+// TEST
+export const test = async (req, res, next) => {
+    try {
+        res.json('User has been created!');
+        console.log("test")
+    } catch (err) {
+        next(err);
+    }
+};
+
 // CREATE USER
 export const createUser = async (req, res, next) => {
     try {
